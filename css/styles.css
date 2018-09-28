@@ -44,7 +44,7 @@ body{
 }
 
 .pic-container img{
-    width:60%;
+    width:600px;
 }
 
 .pic-text{
@@ -73,13 +73,102 @@ body{
     left:200%;
 }
 
+#four{
+    left:300%;
+}
+
 a{
     text-decoration: none;
 }
 
+.inspiration{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin:20px; */
+}
+
+.inspiration-img{
+    width:300px;
+    height: 250px;
+}
+
+.inspiration-text{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:900px;
+    text-align: center;
+    color:orangered;
+    /* background-color: rgba(255, 136, 0, 0.89); */
+}
+
+.heading{
+    width:100%;
+    height: 20%;
+    font-size: 72px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-wrapper{
+    font-size: 28px;
+    width:100%;
+    /* background-color: red; */
+    height: 60%;
+    display:flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: space-evenly;
+    /* align-content: center; */
+}
+
+.content{
+    height: 100%;
+    width:80%;
+    display:flex;
+    /* flex-direction: column; */
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.left{
+    height: 100%;
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.right{
+    height: 100%;
+    width:50%;
+    display:flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+.right img{
+    width:70%;
+    height: 70%;
+}
+
+.content-item{
+    display:flex;
+    justify-content: space-between;
+}
+
+.tick img{
+    width: 50px;
+}
+
 .navIcons{
     position: fixed;
-    width:15%;
+    width:20%;
     display:flex;
     top:0;
     left:50%;
@@ -96,7 +185,7 @@ a{
     align-items: center;
     width:30px;
     height: 30px;
-    background-color:red;
+    background-color:orangered;
     border-radius: 50%;
     color:white;
     transition: all 0.2s;
