@@ -1,15 +1,76 @@
 body{
-    background: rgb(71, 71, 255);
+    background: orangered;
+    overflow: hidden;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .section{
+    position: absolute;
     border-radius: 20px;
     height: 96vh;
     width:97%;
     margin: 2vh 1.5%;
-    background-color: rgb(255, 255, 255)
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(180, 0, 0);
+}
+
+#one{
+    /* height: 96vh;
+    width:97%; */
+    left:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1{
+    /* background-color: blue; */
+    width:100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+}
+
+.pic-container{
+    /* background-color: red; */
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-container img{
+    width:60%;
+}
+
+.pic-text{
+    /* background-color: orange; */
+    color:red;
+    font-weight: 900;
+    height: 30%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    /* align-items: center; */
+}
+
+.pic-text div{
+    font-size: 32px;
+    width: 70%;
+    text-align: center;
+}
+
+#two{
+    left:100%;
+}
+
+#three{
+    left:200%;
 }
 
 a{
@@ -17,7 +78,7 @@ a{
 }
 
 .navIcons{
-    position: absolute;
+    position: fixed;
     width:15%;
     display:flex;
     top:0;
@@ -29,12 +90,20 @@ a{
 }
 
 .navIcons .icons{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     width:30px;
     height: 30px;
-    background-color:blue;
+    background-color:red;
     border-radius: 50%;
     color:white;
+    transition: all 0.2s;
 }
+
+.navIcons .icons:hover{
+    background-color: orange;
+    transform:scale(1.3);
+}
+

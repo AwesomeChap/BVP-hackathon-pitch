@@ -1,0 +1,35 @@
+$("#nav1").click(function(){
+    $("#one").animate({
+        left:'0%'
+    },800,'easeOutExpo')
+    $("#two").animate({
+        left:'100%'
+    },800,'easeOutExpo')
+    $("#three").animate({
+        left:'200%'
+    },800,'easeOutExpo')
+})
+
+$("#nav2").click(function(){
+    $("#one").animate({
+        left:'-100%'
+    },800,'easeOutExpo')
+    $("#two").animate({
+        left:'0%'
+    },800,'easeOutExpo')
+    $("#three").animate({
+        left:'100%'
+    },800,'easeOutExpo')
+})
+
+$("#nav3").click(function(){
+    $("#one").animate({
+        left:'-200%'
+    },800,'easeOutExpo')
+    $("#two").animate({
+        left:'-100%'
+    },800,'easeOutExpo')
+    $("#three").animate({
+        left:'0%'
+    },800,'easeOutExpo')
+})
