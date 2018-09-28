@@ -1,3 +1,5 @@
+// AOS.init();
+
 $("#nav1").click(function(){
     $("#one").animate({
         left:'0%'
@@ -57,3 +59,11 @@ $("#nav4").click(function(){
         left:'0%'
     },800,'easeOutExpo')
 })
+
+// setTimeout(function(){
+//     $('.intro').fadeOut();
+//     $('.main-body').css({display:'block'});
+//     // $(".intro").css({display:'none'});
+// },4000)
+
+$('.main-body').css({display:'block'});

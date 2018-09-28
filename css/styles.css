@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
 body{
     background: orangered;
     overflow: hidden;
@@ -92,16 +94,36 @@ a{
 .inspiration-img{
     width:300px;
     height: 250px;
+    transform:translate(-30%,0);
+    opacity:0;
+    animation: slide-right 0.5s linear 1s forwards;
+}
+
+@keyframes slide-right{
+    to{
+        transform:translate(0,0);
+        opacity: 1;
+    }
 }
 
 .inspiration-text{
     display:flex;
     justify-content: center;
     align-items: center;
-    width:900px;
+    width:80%;
+    transform: translate(10%,0);
+    opacity: 0;
     text-align: center;
     color:orangered;
+    animation: slide-left 0.5s linear 1s forwards
     /* background-color: rgba(255, 136, 0, 0.89); */
+}
+
+@keyframes slide-left{
+    to{
+        transform:translate(0,0);
+        opacity: 1;
+    }
 }
 
 .heading{
@@ -141,6 +163,9 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    transform: translate(-30%,0);
+    opacity:0;
+    animation: move-content-right 0.5s ease-in-out 1 forwards;
 }
 
 .right{
@@ -155,6 +180,9 @@ a{
 .right img{
     width:70%;
     height: 70%;
+    transform: translate(30%,0);
+    opacity:0;
+    animation: move-content-left 0.5s ease-in-out 1 forwards;
 }
 
 .content-item{
@@ -162,8 +190,75 @@ a{
     justify-content: space-between;
 }
 
+.item1{
+    animation: zoom-in-out 0.5s linear 1s;
+}
+
+.item2{
+    animation: zoom-in-out 0.5s linear 2s;
+}
+
+.item3{
+    animation: zoom-in-out 0.5s linear 3s;
+}
+
+.item4{
+    animation: zoom-in-out 0.5s linear 4s;
+}
+
+.item1 .tick img{
+    animation:tickImg 0.5s linear 1s forwards;
+}
+
+.item2 .tick img{
+    animation:tickImg 0.5s linear 2s forwards;
+}
+
+.item3 .tick img{
+    animation:tickImg 0.5s linear 3s forwards;
+}
+
+.item4 .tick img{
+    animation:tickImg 0.5s linear 4s forwards;
+}
+
+
+@keyframes zoom-in-out{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    50%{
+        transform: translate(5%,0) scale(1.2);
+    }
+    100%{
+        transform:translate(0,0) scale(1);
+    }
+}
+
+@keyframes move-content-right{
+    to{
+        transform:translate(0,0);
+        opacity: 1;
+    }
+}
+
+@keyframes move-content-left{
+    to{
+        transform:translate(0,0);
+        opacity: 1;
+    }
+}
+
 .tick img{
     width: 50px;
+    padding:0 10px;
+    opacity:0;
+}
+
+@keyframes tickImg{
+    to{
+        opacity: 1;
+    }
 }
 
 .navIcons{
@@ -196,3 +291,78 @@ a{
     transform:scale(1.3);
 }
 
+.intro{
+    background-color:#111111;
+    display: flex;
+    width:100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+}
+
+.intro div{
+    font-family: 'acme';
+    font-size: 96px;   
+    padding:20px 0;
+}
+
+.div1{
+    color:red;
+    transform:translate(-160%,0);
+    animation: moveRight 3s cubic-bezier(0,1,1,0) 1s forwards;
+}
+
+@keyframes moveRight{
+    from{
+        transform:translate(-160%,0);
+    }
+    to{
+        transform:translate(160%,0);
+    }
+}
+
+.div2{
+    color:orangered;
+    transform:translate(280%,0);
+    animation: moveLeft 3s cubic-bezier(0,1,1,0) 1s forwards;
+}
+
+@keyframes moveLeft{
+    from{
+        transform:translate(280%,0);
+    }
+    to{
+        transform:translate(-280%,0);
+    }
+}
+
+.div3{
+    color:white;
+    opacity:0;
+    animation:fadeInOut 3s cubic-bezier(0,1,1,0) 1s forwards;
+}
+
+@keyframes fadeInOut{
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity:1;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.main-body{
+    display: none;
+}
